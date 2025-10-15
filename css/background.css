@@ -3,5 +3,20 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+
+  /* 🎨 Degradado inicial (atardecer) */
   background: linear-gradient(to top, #f79b42, #ee6352, #764ba2);
+
+  /* 🌆 Animación del cielo (día → noche → día) */
+  animation: skyTransition 30s linear infinite alternate;
+}
+
+/* 🌅 Transición del cielo */
+@keyframes skyTransition {
+  0% {
+    background: linear-gradient(to top, #f79b42, #ee6352, #764ba2);
+  }
+  100% {
+    background: linear-gradient(to top, #2e185b, #1a1240, #0c0924);
+  }
 }
