@@ -7,6 +7,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* 🔥 Animación del auto hacia el horizonte */
+  animation: driveForward 15s ease-in-out infinite alternate;
+}
+
+@keyframes driveForward {
+  0% {
+    bottom: 80px;
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    bottom: 150px;
+    transform: translateX(-50%) scale(0.7);
+    opacity: 0.8;
+  }
+  100% {
+    bottom: 250px;
+    transform: translateX(-50%) scale(0.4);
+    opacity: 0.3;
+  }
 }
 
 .car__body {
