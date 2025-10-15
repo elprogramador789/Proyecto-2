@@ -61,7 +61,7 @@ body, html {
   position: absolute;
   bottom: 15%; /* sube el horizonte un poco */
   width: 50%;
-  height: 25%;
+  height: 55%;
   background: #5d3c8a;
   border-radius: 50% / 20%;
 }
@@ -71,7 +71,7 @@ body, html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 25%;
+  height: 55%;
   background: #f2c94c;
 }
 
@@ -95,7 +95,7 @@ body, html {
   bottom: 0;
   left: 50%;
   width: 60%;
-  height: 25%; /* antes 70%, ahora más corta */
+  height: 35%; /* antes 70%, ahora más corta */
   transform: translateX(-50%);
   background: #2f2f4f;
   clip-path: polygon(43% 10%, 57% 10%, 100% 100%, 0% 100%);
