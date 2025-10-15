@@ -61,7 +61,7 @@ body, html {
   position: absolute;
   bottom: 15%; /* sube el horizonte un poco */
   width: 50%;
-  height: 50%;
+  height: 25%;
   background: #5d3c8a;
   border-radius: 50% / 20%;
 }
