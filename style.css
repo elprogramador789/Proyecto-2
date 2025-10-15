@@ -95,7 +95,7 @@ body, html {
   bottom: 0;
   left: 50%;
   width: 60%;
-  height: 35%; /* antes 70%, ahora más corta */
+  height: 55%; /* antes 70%, ahora más corta */
   transform: translateX(-50%);
   background: #2f2f4f;
   clip-path: polygon(43% 10%, 57% 10%, 100% 100%, 0% 100%);
