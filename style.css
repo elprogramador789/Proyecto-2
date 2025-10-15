@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: #7b4fe0;
+  font-family: sans-serif;
 }
 
 .scene {
@@ -20,7 +20,7 @@ body, html {
   width: 100%;
   height: 60%;
   background: linear-gradient(#7b4fe0, #fca15b);
-  animation: skyColor 20s linear infinite alternate;
+  animation: skyColor 30s linear infinite alternate;
 }
 
 /* SOL */
@@ -29,35 +29,35 @@ body, html {
   bottom: 25%;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background: #ffcc4d;
-  animation: sunMove 20s linear infinite alternate;
+  background: #ffd36b;
+  box-shadow: 0 0 60px 20px rgba(255, 211, 107, 0.5);
+  animation: sunMove 30s linear infinite alternate;
 }
 
 /* NUBES */
 .cloud {
   position: absolute;
-  top: 15%;
   width: 120px;
   height: 60px;
-  background: #fff5e6;
-  border-radius: 50px;
-  opacity: 0.8;
+  background: #ffffffcc;
+  border-radius: 60px;
 }
 
-.cloud1 { left: -150px; animation: moveClouds 60s linear infinite; }
-.cloud2 { left: -300px; top: 25%; animation: moveClouds 90s linear infinite; }
+.cloud1 { top: 10%; left: -150px; animation: moveClouds 60s linear infinite; }
+.cloud2 { top: 20%; left: -300px; animation: moveClouds 80s linear infinite; }
+.cloud3 { top: 15%; left: -450px; animation: moveClouds 100s linear infinite; }
 
 /* MONTAÑAS */
 .mountains {
   position: absolute;
   bottom: 20%;
   width: 100%;
-  height: 15%;
+  height: 20%;
   background: #5d3c8a;
-  border-radius: 50% / 20%;
+  clip-path: polygon(0% 100%, 10% 60%, 25% 80%, 40% 55%, 55% 70%, 70% 50%, 85% 65%, 100% 40%, 100% 100%);
 }
 
 /* CAMPOS */
@@ -79,6 +79,7 @@ body, html {
   height: 70%;
   background: #2f2f4f;
   clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
 }
 
 .line {
@@ -92,8 +93,8 @@ body, html {
   animation: moveLines 1s linear infinite;
 }
 
-.line:nth-child(2) { top: 100px; animation-delay: 0.33s; }
-.line:nth-child(3) { top: 200px; animation-delay: 0.66s; }
+.line2 { top: 100px; animation-delay: 0.33s; }
+.line3 { top: 200px; animation-delay: 0.66s; }
 
 /* AUTO */
 .car {
@@ -102,10 +103,37 @@ body, html {
   left: 50%;
   width: 100px;
   height: 60px;
+  transform: translateX(-50%);
+}
+
+.car-body {
+  position: absolute;
+  width: 100%;
+  height: 60%;
   background: red;
   border-radius: 10px;
-  transform: translateX(-50%);
-  animation: carBounce 1s ease-in-out infinite;
+}
+
+.wheel {
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+}
+
+.wheel-left { left: 10px; }
+.wheel-right { right: 10px; }
+
+.window {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 60px;
+  height: 20px;
+  background: #9fd5ff;
+  border-radius: 5px;
 }
 
 /* ANIMACIONES */
@@ -122,11 +150,6 @@ body, html {
 @keyframes moveLines {
   0% { top: 0; }
   100% { top: 100%; }
-}
-
-@keyframes carBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-5px); }
 }
 
 @keyframes skyColor {
